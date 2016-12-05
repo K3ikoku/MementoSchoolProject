@@ -142,6 +142,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Caretaker.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Memento.cpp" />
+    <ClCompile Include="Originator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Caretaker.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Memento.h" />
+    <ClInclude Include="Originator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
