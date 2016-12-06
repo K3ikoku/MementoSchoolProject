@@ -1,22 +1,33 @@
 #include "Originator.h"
 #include "Memento.h"
+#include <stdio.h>
 
 
 
 Originator::Originator():
-	m_value(0)
+	m_value("")
 {
 }
 
-void Originator::applyMemento(Memento * memento)
+void Originator::SetValue(std::string value)
 {
-	m_value = memento->getValue();
+	m_value = value;
 }
 
-Memento * Originator::createMemento()
+std::string Originator::GetValue()
+{
+	return m_value;
+}
+
+void Originator::ApplyMemento(Memento * memento)
+{
+	m_value = memento->GetValue();
+}
+
+Memento * Originator::CreateMemento()
 {
 	Memento* mem = new Memento();
-	mem->setValue(this->getValue());
+	mem->SetValue(this->GetValue());
 
 	return mem;
 }

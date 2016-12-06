@@ -1,18 +1,19 @@
 #pragma once
+#include <string>
 class Memento;
 class Originator
 {
 public:
 	Originator();
 	
-	void setValue(int value) { m_value = value; }
-	int getValue() { return m_value; }
-	void applyMemento(Memento* memento);
+	void SetValue(std::string value);
+	std::string GetValue();
+	void ApplyMemento(Memento* memento);
 
-	Memento* createMemento();
+	Memento* CreateMemento();
 	
 
 private:
-	int m_value;
+	std::string m_value;
 };
 

@@ -1,19 +1,20 @@
 #pragma once
 #include "Memento.h"
 #include "Originator.h"
-#include <stack>
+#include <vector>
 class Caretaker
 {
 public:
 	Caretaker();
 	~Caretaker();
 
-	void saveState(Originator& originator);
-	void undoState(Originator& originator);
-	void redoState(Originator& originator);
+	void SaveState(Originator& originator);
+	void UndoState(Originator& originator);
+	void RedoState(Originator& originator);
+	void Print(Originator& originator);
 
 private:
-	std::stack<Memento*> m_undoStack;
-	std::stack<Memento*> m_redoStack;
+	std::vector<Memento*> m_undoStack;
+	std::vector<Memento*> m_redoStack;
 };
 

@@ -1,14 +1,16 @@
 #pragma once
+#include <string>
+
 class Memento
 {
 public:
 	Memento();
 
-	void setValue(int value) { m_value = value; }
-	int getValue() { return m_value; }
+	void SetValue(std::string value);
+	std::string GetValue();
 
 
 private:
-	int m_value;
+	std::string m_value;
 };
 
